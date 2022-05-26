@@ -14,6 +14,10 @@ const [current, setCurrent] = useState(0);
 
   console.log (current );
 
+  const prevSlide = () => {
+      setCurrent(current === 0 ? length -1 : current -1);
+  }
+  console.log(current); 
 if(!Array.isArray (slides)|| slides.length <= 0){
     return null;
 }
@@ -22,7 +26,7 @@ if(!Array.isArray (slides)|| slides.length <= 0){
 
 return (
   <section className="slider">
-    <FaArrowAltCircleLeft className="leftarrow" />
+    <FaArrowAltCircleLeft className="leftarrow" onClick={prevSlide} />
     <FaArrowAltCircleRight className="rightarrow" onClick={nextSlide} />
     {Sliderdata.map((slide, index) => {
       return <img src={slide.image} alt="imagescol" className="image" />;
