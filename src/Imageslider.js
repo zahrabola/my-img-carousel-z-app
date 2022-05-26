@@ -29,7 +29,13 @@ return (
     <FaArrowAltCircleLeft className="leftarrow" onClick={prevSlide} />
     <FaArrowAltCircleRight className="rightarrow" onClick={nextSlide} />
     {Sliderdata.map((slide, index) => {
-      return <img src={slide.image} alt="imagescol" className="image" />;
+      return (
+  <div className={index === current ? "slide active" : "slide"} key={index}>
+        {index === current && (
+          <img src={slide.image} alt="imagescol" className="image" />
+        )}
+      </div>
+      );
     })}
   </section>
 );
