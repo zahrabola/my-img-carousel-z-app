@@ -10,6 +10,7 @@
   width: 1000px;
   height: 600px;
   border-radius: 10px;
+  margin: 10px;
 }
 
 .rightarrow {
@@ -34,3 +35,13 @@
   user-select: none;
 }
 
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

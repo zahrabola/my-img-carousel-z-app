@@ -14,10 +14,10 @@ const [current, setCurrent] = useState(0);
 
 return (
   <section className="slider">
-    <FaArrowAltCircleLeft className="leftarrow" onClick={prevSlide} />
-    <FaArrowAltCircleRight className="rightarrow" onClick={nextSlide} />
+    <FaArrowAltCircleLeft className="leftarrow"  />
+    <FaArrowAltCircleRight className="rightarrow"  />
     {Sliderdata.map((slide, index) => {
-      return <img src={slide.image} alt="imagescol" />;
+      return <img src={slide.image} alt="imagescol" className="image"/>;
     })}
   </section>
 );
